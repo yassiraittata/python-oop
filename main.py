@@ -1,4 +1,6 @@
 class Item:
+    pay_rate = 0.8
+
     def __init__(self, title: str, price: float, quantity=0):
         # validation
         assert price >= 0, f"price must be positif number"
@@ -10,7 +12,7 @@ class Item:
         self.quantity = quantity
 
     def calculate_price(self):
-        return
+        return self.price * self.quantity
 
 
 phone = Item('phone', 5, 4)
