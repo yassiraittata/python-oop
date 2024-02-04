@@ -22,11 +22,14 @@ class Item:
         total = self.price = self.price * Item.pay_rate
         return total
 
+    def __repr__(self):
+        return f"Item('{self.title}', '{self.price}', '{self.quantity}')"
+
 
 phone = Item('phone', 500, 4)
 phone = Item('Laptop', 999, 4)
 phone = Item('watch', 349, 4)
 
-print(Item.all_items    )
+print(Item.all_items)
 
 # print(phone.title)
