@@ -25,11 +25,17 @@ class Item:
     def __repr__(self):
         return f"Item('{self.title}', '{self.price}', '{self.quantity}')"
 
+    @classmethod
+    def instance_from_csv(cls):
+        print('hello')
+
 
 phone = Item('phone', 500, 4)
 phone = Item('Laptop', 999, 4)
 phone = Item('watch', 349, 4)
 
-print(Item.all_items)
+phone.instance_from_csv()
+
+# Item.instance_from_csv()
 
 # print(phone.title)
